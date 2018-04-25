@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="24cccaa6-342a-44af-8540-096eb5d6d5ee" ChangeDateTime="04/25/2018 06:51:36">
+    <Property Name="ElementName" Value="[dbo].[Car].[Brand]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Car]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Producer" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3d6c7eb9-8af7-4095-a77a-85a9165d28af" ChangeDateTime="04/25/2018 06:52:32">
+    <Property Name="ElementName" Value="[dbo].[Car].[Produced]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Car]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ProducedFrom" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a7884a94-e920-4270-bce9-1cebaa2c1082" ChangeDateTime="04/25/2018 06:53:03">
+    <Property Name="ElementName" Value="[dbo].[Car].[Producer]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Car]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ProducerName" />
+  </Operation>
+</Operations>
