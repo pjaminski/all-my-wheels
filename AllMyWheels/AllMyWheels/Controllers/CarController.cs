@@ -1,16 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using AllMyWheels.DAL.Repositories;
 
 namespace AllMyWheels.Controllers
 {
-    public class HomeController : Controller
+    public class CarController : Controller
     {
+        private readonly ICarRepository _carRepository;
+
+        public CarController(ICarRepository carRepository)
+        {
+            _carRepository = carRepository;
+        }
+
         public ActionResult Index()
         {
-            return View();
+            var cars = _carRepository.GetCars();
+            return View();//todo: add viewmodel for this view
         }
 
         public ActionResult About()
