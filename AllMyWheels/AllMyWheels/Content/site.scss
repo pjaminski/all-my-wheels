@@ -1,24 +1,102 @@
-﻿body {
+﻿$navbar-color: #6E91AC;
+$car-div-color: #C5D7DF;
+$backgroud-color: #F5F5F5;
+$jumbotron-color: #D05B33;
+$font-color: #68727A;
+
+/* bootstrap overrides */
+body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: $backgroud-color;
+    color: $font-color;
 }
 
-/* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    padding-top: 80px;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
 .dl-horizontal dt {
     white-space: normal;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.navbar {
+    min-height: 80px;
+    background-color: $navbar-color;
+    border-bottom-color: $backgroud-color;
+}
+
+.navbar-brand {
+    padding: 0 15px;
+    height: 80px;
+    line-height: 80px;
+}
+
+.navbar-toggle {
+    /* (120px - button height 34px) / 2 = 43px */
+    margin-top: 43px;
+    padding: 9px 10px !important;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav > li > a {
+        /* (120px - line-height of 27px) / 2 = 46.5px */
+        padding-top: 46.5px;
+        padding-bottom: 46.5px;
+        line-height: 27px;
+    }
+}
+
+.jumbotron {
+    background-color: $jumbotron-color;
+    color: white;
+}
+
+hr {
+    border-color: $jumbotron-color;
+}
+
+.col-md-4 {
+    background-color: $car-div-color;
+    padding: 5px 5px 5px 5px;
+    border: solid 3px $backgroud-color;
+}
+
+/* additional styles */
+.car-img {
+    width: 160px;
+    height: 120px;
+    float: left;
+    margin-right: 5px;
+}
+
+@mixin details {
+    display: block;
+    float: none;
+    margin-left: 4px;
+}
+
+.car-model-name {
+    @include details;
+    font-weight: 600;
+    font-size: 1.4em;
+}
+
+.car-producer-name {
+    @include details;
+    font-size: 1.0em;
+}
+
+.car-produced {
+    @include details;
+    font-size: 0.8em;
+    padding-top: 5px;
 }
