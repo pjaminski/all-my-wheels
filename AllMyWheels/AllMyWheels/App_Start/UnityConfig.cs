@@ -2,6 +2,7 @@ using System;
 using System.Configuration;
 using AllMyWheels.DAL;
 using AllMyWheels.DAL.Repositories;
+using AllMyWheels.Services;
 using Unity;
 using Unity.Injection;
 
@@ -40,6 +41,7 @@ namespace AllMyWheels
         public static void RegisterTypes(IUnityContainer container)
         {
             container.RegisterType<IDatabaseClient, DatabaseClient>(new InjectionConstructor(ConfigurationManager.ConnectionStrings["AllMyWheelsDb"].ConnectionString));
+            container.RegisterType<ICarService, CarService>();
             container.RegisterType<ICarRepository, CarRepository>();
         }
     }

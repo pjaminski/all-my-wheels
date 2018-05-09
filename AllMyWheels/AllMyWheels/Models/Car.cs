@@ -15,5 +15,7 @@ namespace AllMyWheels.Models
         public int ProducedTo { get; set; }
 
         public string Description { get; set; }
+
+        public string ImageUrl { get; set; }
     }
 }
