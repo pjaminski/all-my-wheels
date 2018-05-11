@@ -1,14 +1,13 @@
 /* bootstrap overrides */
 body {
-  padding-top: 50px;
-  padding-bottom: 20px;
+  padding-top: 85px;
+  padding-bottom: 10px;
   background-color: #F5F5F5;
   color: #68727A; }
 
 .body-content {
   padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 80px; }
+  padding-right: 15px; }
 
 .dl-horizontal dt {
   white-space: normal; }
@@ -19,33 +18,36 @@ textarea {
   max-width: 280px; }
 
 .navbar {
-  min-height: 80px;
-  background-color: #6E91AC;
+  min-height: 51px;
+  background-color: #D05B33;
   border-bottom-color: #F5F5F5; }
 
-.navbar-brand {
-  padding: 0 15px;
-  height: 80px;
-  line-height: 80px; }
-
-.navbar-toggle {
-  /* (120px - button height 34px) / 2 = 43px */
-  margin-top: 43px;
-  padding: 9px 10px !important; }
-
-@media (min-width: 768px) {
-  .navbar-nav > li > a {
-    /* (120px - line-height of 27px) / 2 = 46.5px */
-    padding-top: 46.5px;
-    padding-bottom: 46.5px;
-    line-height: 27px; } }
-
 .jumbotron {
-  background-color: #D05B33;
+  background-color: #6E91AC;
   color: white; }
 
 hr {
-  border-color: #D05B33; }
+  border-color: #6E91AC; }
+
+.nav {
+  padding-top: 10px; }
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #F5F5F5; }
+  .navbar-inverse .navbar-nav > li > a:hover {
+    color: #C5D7DF; }
+
+.navbar-inverse .navbar-nav > .open > a {
+  color: #F5F5F5;
+  background-color: #D05B33; }
+  .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #F5F5F5;
+    background-color: #D05B33; }
+
+.dropdown-menu {
+  background-color: #D05B33;
+  padding: 15px;
+  padding-bottom: 10px; }
 
 .col-md-4 {
   background-color: #C5D7DF;
@@ -82,3 +84,6 @@ hr {
 .cars-count {
   font-size: 1.2em;
   font-weight: 600; }
+
+.logo {
+  padding-top: 10px; }

@@ -1,42 +1,51 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title | All My Wheels</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="@Url.Action("Index", "Car")"><img src="~/Content/img/logo.png" width="120" height="120"/></a>
-            </div>
-            <div class="navbar-collapse collapse pull-right">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - <a href="mailto:piotr.jaminski@gmail.com">Piotr Jamiński</a></p>
-        </footer>
-    </div>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <p class="logo">
+                        <a href="@Url.Action("Index", "Car")">
+                            <img src="~/Content/img/logo.png" title="All My Wheels" alt="Logo"/>
+                        </a>
+                    </p>
+                </div>
+                <div class="col-xs-6">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Logowanie</a>
+                            <div class="dropdown-menu">
+                                <form class="form-horizontal" method="post" accept-charset="UTF-8">
+                                    <input id="sp_uname" class="form-control" type="text" name="sp_uname" placeholder="Login..."/>
+                                    <input id="sp_pass" class="form-control" type="password" name="sp_pass" placeholder="Hasło.."/>
+                                    <input class="btn btn-primary" type="submit" name="submit" value="Zaloguj się"/>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+                </div>
+            </div>
+    </div>
+</div>
+<div class="container body-content">
+    @RenderBody()
+    <hr/>
+    <footer>
+        <p>&copy; @DateTime.Now.Year - <a href="mailto:piotr.jaminski@gmail.com">Piotr Jamiński</a></p>
+    </footer>
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)
 </body>
 </html>

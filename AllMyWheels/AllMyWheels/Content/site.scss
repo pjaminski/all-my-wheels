@@ -1,13 +1,13 @@
-﻿$navbar-color: #6E91AC;
+﻿$navbar-color: #D05B33;
 $car-div-color: #C5D7DF;
 $backgroud-color: #F5F5F5;
-$jumbotron-color: #D05B33;
+$jumbotron-color: #6E91AC;
 $font-color: #68727A;
 
 /* bootstrap overrides */
 body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding-top: 85px;
+    padding-bottom: 10px;
     background-color: $backgroud-color;
     color: $font-color;
 }
@@ -15,7 +15,6 @@ body {
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 80px;
 }
 
 .dl-horizontal dt {
@@ -29,30 +28,9 @@ textarea {
 }
 
 .navbar {
-    min-height: 80px;
+    min-height: 51px;
     background-color: $navbar-color;
     border-bottom-color: $backgroud-color;
-}
-
-.navbar-brand {
-    padding: 0 15px;
-    height: 80px;
-    line-height: 80px;
-}
-
-.navbar-toggle {
-    /* (120px - button height 34px) / 2 = 43px */
-    margin-top: 43px;
-    padding: 9px 10px !important;
-}
-
-@media (min-width: 768px) {
-    .navbar-nav > li > a {
-        /* (120px - line-height of 27px) / 2 = 46.5px */
-        padding-top: 46.5px;
-        padding-bottom: 46.5px;
-        line-height: 27px;
-    }
 }
 
 .jumbotron {
@@ -62,6 +40,34 @@ textarea {
 
 hr {
     border-color: $jumbotron-color;
+}
+
+.nav {
+    padding-top: 10px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: $backgroud-color;
+
+    &:hover {
+        color: $car-div-color;
+    }
+}
+
+.navbar-inverse .navbar-nav > .open > a {
+    color: $backgroud-color;
+    background-color: $navbar-color;
+
+    &:hover, &:focus {
+        color: $backgroud-color;
+        background-color: $navbar-color;
+    }
+}
+
+.dropdown-menu {
+    background-color: $navbar-color;
+    padding: 15px; 
+    padding-bottom: 10px;
 }
 
 .col-md-4 {
@@ -104,4 +110,8 @@ hr {
 .cars-count {
     font-size: 1.2em;
     font-weight: 600;
+}
+
+.logo {
+    padding-top: 10px;
 }
